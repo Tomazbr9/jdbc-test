@@ -29,7 +29,6 @@ public class DB {
 		return conn;
 	}
 	
-	
 	private static Properties loadProperties() {
 		try(FileInputStream fs = new FileInputStream("db.properties")) {
 		    Properties props = new Properties();
