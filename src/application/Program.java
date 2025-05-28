@@ -1,14 +1,17 @@
 package application;
 
-import entities.Product;
+import model.dao.DaoFactory;
+import model.dao.SellerDao;
+import model.entities.Seller;
 
 public class Program {
 
 	public static void main(String[] args) {
-		Product product = new Product();
+		SellerDao sellerDao = DaoFactory.createSellerDao();
 		
-		product.all();
-
+		Seller seller = sellerDao.findById(1);
+		
+		System.out.println(seller);
 	}
 
 }
